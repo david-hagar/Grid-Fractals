@@ -13,6 +13,7 @@ import gridfractals.commands.VisibilityGridCommand;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
 
 import javax.swing.*;
 
@@ -73,8 +74,6 @@ public class ToolsFrame extends JFrame
 
 	BorderLayout borderLayout4 = new BorderLayout();
 
-	JMenu jMenu1 = new JMenu();
-
 	JMenu jMenu2 = new JMenu();
 
 	JMenu jMenu3 = new JMenu();
@@ -106,8 +105,6 @@ public class ToolsFrame extends JFrame
 	JMenuItem maxContrastMenuItem = new JMenuItem();
 
 	JMenuItem doubleResMenuItem = new JMenuItem();
-
-	JMenuItem libraryViewDirMenuItem = new JMenuItem();
 
 	JMenuItem addNoiseMenuItem = new JMenuItem();
 
@@ -163,7 +160,6 @@ public class ToolsFrame extends JFrame
 		jPanel1.setLayout(borderLayout2);
 		jPanel2.setLayout(borderLayout3);
 		jPanel3.setLayout(borderLayout4);
-		jMenu1.setText("Library");
 		jMenu2.setText("Command Set");
 		jMenu3.setText("Commands");
 		jMenu4.setText("View");
@@ -268,13 +264,6 @@ public class ToolsFrame extends JFrame
                 doubleResMenuItem_actionPerformed(e);
             }
         });
-		libraryViewDirMenuItem.setText("View  Directory ...");
-		libraryViewDirMenuItem
-				.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(ActionEvent e) {
-                        libraryViewDirMenuItem_actionPerformed(e);
-                    }
-                });
 		addNoiseMenuItem.setText("Add Noise");
 		addNoiseMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -333,7 +322,6 @@ public class ToolsFrame extends JFrame
 		jMenuFile.add(jMenuFileExit);
 		jMenuHelp.add(jMenuHelpAbout);
 		jMenuBar1.add(jMenuFile);
-		jMenuBar1.add(jMenu1);
 		jMenuBar1.add(jMenu2);
 		jMenuBar1.add(jMenu3);
 		jMenuBar1.add(jMenu4);
@@ -365,7 +353,6 @@ public class ToolsFrame extends JFrame
 		jMenu2.add(newCommandSetMenuItem);
 		jMenu2.add(saveCommandSetMenuItem);
 		jMenu2.add(loadCommandSetMenuItem);
-		jMenu1.add(libraryViewDirMenuItem);
 		this.setJMenuBar(jMenuBar1);
 	}
 
@@ -398,11 +385,6 @@ public class ToolsFrame extends JFrame
 		}
 	}
 
-	void libraryViewDirMenuItem_actionPerformed(ActionEvent e)
-	{
-
-	}
-
 	void newCommandSetMenuItem_actionPerformed(ActionEvent e)
 	{
 		commandSet.clear();
@@ -416,9 +398,13 @@ public class ToolsFrame extends JFrame
 		if (ret != JFileChooser.APPROVE_OPTION)
 			return;
 
+        File f = fc.getSelectedFile();
+        if( !f.toString().endsWith(".txt"))
+            f = new File(f.toString() + ".txt");
+
 		try
 		{
-			commandSet.save(fc.getSelectedFile());
+			commandSet.save(f);
 		} catch (Exception ex)
 		{
 			ex.printStackTrace();
@@ -549,10 +535,12 @@ public class ToolsFrame extends JFrame
 		if (ret != JFileChooser.APPROVE_OPTION)
 			return;
 
+        String fileName = fc.getSelectedFile().getAbsolutePath();
+        if( !fileName.endsWith(".png"))
+            fileName+=".png";
 		try
 		{
-			PNGSaver.saveToPNG(Startup.viewWindow.gridView.grid, fc
-					.getSelectedFile().getAbsolutePath());
+			PNGSaver.saveToPNG(Startup.viewWindow.gridView.grid, fileName);
 		} catch (Exception ex)
 		{
 			ex.printStackTrace();
