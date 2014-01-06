@@ -1,0 +1,8 @@
+gridfractals.commands.NewGridCommand|params.IntParameter,Width,400|params.IntParameter,Height,400|params.IntParameter,Random Seed,123|
+gridfractals.commands.VisibilityGridCommand|params.IntParameter,Center as origin 0/1,0|
+gridfractals.commands.AverageCommand|params.IntParameter,Reach,5|
+gridfractals.commands.AverageCommand|params.IntParameter,Reach,5|
+gridfractals.commands.ClipCommand|params.FloatParameter,Top,0.8|params.FloatParameter,Bottom,0.0|
+gridfractals.commands.AverageCommand|params.IntParameter,Reach,5|
+gridfractals.commands.AverageCommand|params.IntParameter,Reach,5|
+gridfractals.commands.ClipCommand|params.FloatParameter,Top,0.35|params.FloatParameter,Bottom,0.25|

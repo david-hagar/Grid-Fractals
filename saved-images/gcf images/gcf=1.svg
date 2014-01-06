@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg
+   id="svg559"
+   sodipodi:version="0.33beta"
+   width="210mm"
+   height="297mm"
+   sodipodi:docname="C:\data\Java\code\GridFractals_images\gcf images\gcf=1.svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs
+     id="defs561" />
+  <sodipodi:namedview
+     id="base" />
+  <image
+     xlink:href="201.png"
+     sodipodi:absref="C:\Documents and Settings\David Hagar\Desktop\201.png"
+     width="689.3187"
+     height="689.3187"
+     id="image562"
+     x="29.57175"
+     y="134.9043" />
+  <text
+     style="fill:black;stroke:none;font-family:Arial;font-style:normal;font-weight:normal;font-size:16.00000;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:middle;writing-mode:lr;"
+     x="380.000099"
+     y="888.611650"
+     id="text563"
+     sodipodi:linespacing="100%">
+    <tspan
+       x="380.000092"
+       y="888.611633"
+       sodipodi:role="line"
+       id="tspan572">Graph of GCF( x, y ) = 1</tspan>
+    <tspan
+       x="380.000092"
+       y="904.611633"
+       sodipodi:role="line"
+       id="tspan574">( Black = true, White = false )</tspan>
+  </text>
+</svg>

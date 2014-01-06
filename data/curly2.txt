@@ -1,0 +1,15 @@
+gridfractals.commands.NewGridCommand|params.IntParameter,Width,110|params.IntParameter,Height,110|params.IntParameter,Random Seed,123|
+gridfractals.commands.DoubleResolutionCommand|
+gridfractals.commands.AverageCommand|params.IntParameter,Reach,4|
+gridfractals.commands.ClipCommand|params.FloatParameter,Top,0.6|params.FloatParameter,Bottom,0.5|
+gridfractals.commands.AverageCommand|params.IntParameter,Reach,1|
+gridfractals.commands.DoubleResolutionCommand|
+gridfractals.commands.AverageCommand|params.IntParameter,Reach,2|
+gridfractals.commands.GradientMagnitudeCommand|
+gridfractals.commands.GradientMagnitudeCommand|
+gridfractals.commands.AverageCommand|params.IntParameter,Reach,1|
+gridfractals.commands.GradientMagnitudeCommand|
+gridfractals.commands.DoubleResolutionCommand|
+gridfractals.commands.AverageCommand|params.IntParameter,Reach,1|
+gridfractals.commands.GradientMagnitudeCommand|
+gridfractals.commands.ClipCommand|params.FloatParameter,Top,0.7|params.FloatParameter,Bottom,0.0|
