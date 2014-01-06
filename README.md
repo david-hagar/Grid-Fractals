@@ -29,7 +29,7 @@ Features:
 
 
  Command | Description 
- -- | -- 
+ --- | --- 
  New Grid | creates a new grid of random values with the given width and height and seed
  Average  | sets the grid cell to the average if its neighbors with the distance to average over setable. After averaging it runs a max contrast (see bellow).
  Max Contrast | scales everything so the largest value is white and the darkest value is black
